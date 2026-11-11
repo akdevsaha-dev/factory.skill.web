@@ -1,10 +1,11 @@
 'use client';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { ArrowUpRight, GithubLogo, Sun, Moon, List, X, Cube } from '@phosphor-icons/react';
+import { ArrowUpRight, GithubLogo, Sun, Moon, List, X } from '@phosphor-icons/react';
 import { usePathname } from 'next/navigation';
+import { BrandMark } from './brand-mark';
 import { REPO } from '@/lib/skills';
-export function Brand() { return <span className="brand"><span className="brand-mark"><Cube weight="duotone" size={23}/></span>factory<span className="brand-suffix">skills</span></span>; }
+export function Brand() { return <span className="brand"><span className="brand-mark"><BrandMark/></span>factory<span className="brand-suffix">skills</span></span>; }
 export function Header() {
  const [theme,setTheme]=useState('dark'); const [menu,setMenu]=useState(false); const path=usePathname();
  useEffect(()=>{setTheme(document.documentElement.dataset.theme || 'dark');},[]);

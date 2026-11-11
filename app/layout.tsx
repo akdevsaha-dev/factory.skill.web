@@ -9,6 +9,7 @@ export const metadata: Metadata = {
   title: { default: 'Factory Skills · Give your agent an engineering standard', template: '%s · Factory Skills' },
   description: 'Open-source skills that help coding agents read your codebase, follow your conventions, and verify their work. Built for Claude Code, Codex, and more.',
   openGraph: { type: 'website', title: 'Factory Skills', description: 'Your agent. With an engineering standard.', images: ['/opengraph-image.png'] },
+  icons: { icon: [{ url: '/brand/factory-mark.svg', type: 'image/svg+xml' }, { url: '/brand/favicon-32.png', sizes: '32x32', type: 'image/png' }], apple: '/brand/apple-touch-icon.png' },
   twitter: { card: 'summary_large_image' },
 };
 export default function RootLayout({ children }: { children: React.ReactNode }) {
