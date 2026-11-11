@@ -30,3 +30,7 @@ Geist and Geist Mono, neutral color tokens, restrained borders and shadows, 7px 
 ## Guides and lessons
 
 `lib/skill-guides.ts` contains the 11 skill guides and 56 example prompts. `lib/lessons.ts` contains the six ordered lessons. Both feed statically generated pages under `/skills/` and `/learn/`. Add a data entry to generate a new route and include it in navigation and the sitemap. Commands marked Terminal run in a shell; prompts marked Send to your agent are requests for the coding agent. Examples are illustrative, not execution records.
+
+## License
+
+[MIT](LICENSE) © 2026 Akdev Saha.
