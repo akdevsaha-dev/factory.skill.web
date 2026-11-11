@@ -1,8 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="860" height="410" viewBox="0 0 860 410" role="img" aria-label="Installing the implement-feature skill and using it in Claude Code">
-<style>text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14px;white-space:pre}rect[class^="c"]{display:none}</style>
-<rect width="860" height="410" rx="12" fill="#0d1117" stroke="#30363d"/>
-<circle cx="24" cy="22" r="6" fill="#ff5f57"/><circle cx="44" cy="22" r="6" fill="#febc2e"/><circle cx="64" cy="22" r="6" fill="#28c840"/>
-<text x="430.0" y="27" text-anchor="middle" fill="#7d8590" style="font-size:12px">factory-skills</text>
-<line x1="0" y1="42" x2="860" y2="42" stroke="#21262d"/>
-<g class="l0"><text x="28" y="74"><tspan fill="#7ee787">$ </tspan><tspan fill="#e6edf3">npx skills add akdevsaha-dev/factory-skills --skill implement-feature</tspan></text><rect class="c0" x="44.8" y="58" width="608.4" height="22" fill="#0d1117"/></g><g class="l1"><text x="28" y="98"><tspan fill="#3fb950">✓ </tspan><tspan fill="#c9d1d9">Installed </tspan><tspan fill="#d2a8ff">implement-feature</tspan><tspan fill="#7d8590">  → Claude Code, Codex</tspan></text></g><g class="l3"><text x="28" y="146"><tspan fill="#7ee787">$ </tspan><tspan fill="#e6edf3">claude</tspan></text><rect class="c3" x="44.8" y="130" width="79.2" height="22" fill="#0d1117"/></g><g class="l4"><text x="28" y="170"><tspan fill="#d2a8ff">&gt; </tspan><tspan fill="#e6edf3">/implement-feature implement fallback for the fetching views</tspan></text><rect class="c4" x="44.8" y="154" width="532.8" height="22" fill="#0d1117"/></g><g class="l6"><text x="28" y="218"><tspan fill="#79c0ff">● </tspan><tspan fill="#c9d1d9">Found 3 views that fetch data</tspan></text></g><g class="l7"><text x="28" y="242"><tspan fill="#79c0ff">● </tspan><tspan fill="#c9d1d9">ProjectsView already handles </tspan><tspan fill="#7d8590">loading · error · empty</tspan></text></g><g class="l8"><text x="28" y="266"><tspan fill="#79c0ff">● </tspan><tspan fill="#c9d1d9">Reusing </tspan><tspan fill="#d2a8ff">&lt;Spinner /&gt;</tspan><tspan fill="#c9d1d9"> and </tspan><tspan fill="#d2a8ff">&lt;ErrorState /&gt;</tspan></text></g><g class="l9"><text x="28" y="290"><tspan fill="#79c0ff">● </tspan><tspan fill="#c9d1d9">Updated InvoicesView.tsx, MembersView.tsx</tspan></text></g><g class="l10"><text x="28" y="314"><tspan fill="#79c0ff">● </tspan><tspan fill="#c9d1d9">Read “fallback” as </tspan><tspan fill="#7d8590">loading · error · empty</tspan><tspan fill="#c9d1d9">, like ProjectsView</tspan></text></g><g class="l12"><text x="28" y="362"><tspan fill="#3fb950">✓ typecheck passed</tspan><tspan fill="#7d8590">  ·  0 new files  ·  0 new dependencies</tspan></text></g>
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="386" viewBox="0 0 860 386" role="img" aria-labelledby="title desc">
+<title id="title">Factory Skills terminal example</title>
+<desc id="desc">Install implement-feature, ask Claude Code for fallback states, reuse existing components, and verify the change with a typecheck. This transcript is adapted from the repository demo.</desc>
+<defs><linearGradient id="surface" x2="0" y2="1"><stop stop-color="#141414"/><stop offset="1" stop-color="#101010"/></linearGradient></defs>
+<style>text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14px;font-weight:400;letter-spacing:0;white-space:pre}.command{fill:#e6edf3}.output{fill:#c9d1d9}.quiet{fill:#8b949e}.symbol{fill:#79c0ff}.emphasis{fill:#d2a8ff}.prompt{fill:#7ee787}.success{fill:#3fb950}.small{font-size:11px}</style>
+<rect width="860" height="386" fill="url(#surface)"/>
+<text x="30" y="37" class="command"><tspan class="prompt">$ </tspan>npx skills add akdevsaha-dev/factory-skills --skill implement-feature</text>
+<text x="48" y="64" class="output"><tspan class="success">✓</tspan> Installed <tspan class="emphasis">implement-feature</tspan> <tspan class="quiet">→ Claude Code, Codex</tspan></text>
+<line x1="30" y1="87" x2="830" y2="87" stroke="#262626"/>
+<text x="30" y="118" class="command"><tspan class="prompt">$ </tspan>claude</text>
+<text x="30" y="145" class="command"><tspan class="emphasis">› </tspan>/implement-feature implement fallback for the fetching views</text>
+<text x="48" y="189" class="output"><tspan class="symbol">·  </tspan>Found 3 views that fetch data</text>
+<text x="48" y="215" class="output"><tspan class="symbol">·  </tspan>ProjectsView already handles <tspan class="quiet">loading · error · empty</tspan></text>
+<text x="48" y="241" class="output"><tspan class="symbol">·  </tspan>Reusing <tspan class="emphasis">&lt;Spinner /&gt;</tspan> and <tspan class="emphasis">&lt;ErrorState /&gt;</tspan></text>
+<text x="48" y="267" class="output"><tspan class="symbol">·  </tspan>Updated <tspan class="emphasis">InvoicesView.tsx</tspan>, <tspan class="emphasis">MembersView.tsx</tspan></text>
+<text x="48" y="293" class="output"><tspan class="symbol">·  </tspan>Read “fallback” as <tspan class="quiet">loading · error · empty</tspan>, like ProjectsView</text>
+<rect x="30" y="320" width="800" height="40" rx="6" fill="#1b1b1b" stroke="#2b2b2b"/>
+<text x="46" y="345" class="success"><tspan>✓ </tspan>typecheck passed</text>
+<text x="814" y="345" text-anchor="end" class="quiet small">0 new files · 0 new dependencies</text>
 </svg>

@@ -1,0 +1,103 @@
+/* Text roles use rem so browser text-size preferences remain effective.
+   Display headings, component dimensions, and the terminal illustration retain their original sizes. */
+:root {
+  --type-meta: .6875rem;     /* 11px: supplementary numbers and uppercase group labels */
+  --type-caption: .75rem;   /* 12px: captions, source notes, compact code */
+  --type-ui: .8125rem;      /* 13px: controls and secondary links */
+  --type-support: .875rem;  /* 14px: card descriptions, navigation, workflow steps */
+  --type-reading: .9375rem; /* 15px: documentation prose */
+}
+body { font-optical-sizing: auto; font-synthesis: none; }
+
+/* Navigation: Linear's measured 13/19.5 header and 14/21 docs rhythm. */
+.navigation { font-size: var(--type-ui); line-height: 1.5; font-weight: 400; }
+.docs-sidebar a,
+.docs-sidebar .lesson-nav-link,
+.docs-sidebar .docs-home-link { font-size: var(--type-support); line-height: 1.5; font-weight: 500; }
+.docs-sidebar .lesson-nav-link > span { font-size: var(--type-caption); line-height: 21px; padding-top: 0; }
+.docs-nav-label { font-size: var(--type-meta); line-height: 1.5; letter-spacing: .09em; }
+.docs-toc a { font-size: var(--type-ui); line-height: 1.6; }
+.docs-breadcrumb { font-size: var(--type-caption); line-height: 1.5; }
+
+/* Reading: enough leading for continuous prose, with a consistent measure. */
+.docs-title > p:not(.docs-deck),
+.docs-section > p,
+.lesson-section > p { font-size: var(--type-reading); line-height: 1.8; }
+.docs-note p,
+.prompt-example > p,
+.docs-process li,
+.related-skills p,
+.docs-bottom-cta p { font-size: var(--type-support); line-height: 1.65; }
+.docs-note h3 { font-size: var(--type-ui); line-height: 1.5; font-weight: 550; }
+.docs-process li:before { font-size: var(--type-caption); line-height: 23.1px; }
+.example-heading h3 { font-size: var(--type-reading); line-height: 1.5; }
+.related-skills code { font-size: var(--type-support); line-height: 1.5; }
+.related-skills a > span,
+.docs-bottom-cta > span,
+.lesson-pagination a > span { font-size: var(--type-ui); line-height: 1.5; }
+.lesson-pagination strong { font-size: var(--type-support); line-height: 1.5; }
+.docs-section > p.docs-caption,
+.docs-source { font-size: var(--type-caption); line-height: 1.65; }
+.docs-source a { white-space: normal; }
+.docs-article .copy-command code { font-size: var(--type-ui); line-height: 1.8; }
+.copy-command code,
+.example-command { font-size: var(--type-caption); line-height: 1.8; }
+
+/* Supporting copy uses the same role across cards, steps, and pages. */
+.skill-card > p,
+.directory-card > p,
+.lesson-card p,
+.principle p,
+.contribute-intro p,
+.contribution-step p,
+.contribute-callout p,
+.directory-help p { font-size: var(--type-support); line-height: 1.7; }
+.workflow-stage p,
+.companions p,
+.mini-steps p { font-size: var(--type-ui); line-height: 1.65; }
+.mini-steps h3,
+.panel-heading { font-size: var(--type-support); line-height: 1.5; }
+.install-panel > p,
+.install-note,
+.detail-list,
+.dialog-content > p,
+.faq-list details > p { font-size: var(--type-support); line-height: 1.7; }
+.faq-list summary { font-size: var(--type-support); line-height: 1.5; }
+
+/* Controls and link affordances stay compact; their boxes do not grow. */
+.button,
+.github-nav,
+.filter-tabs button,
+.skill-search input,
+.text-link,
+.collection-more > .text-link,
+.lesson-card .text-link,
+.learn-hero .hero-actions > .text-link,
+.directory-card > .text-link { font-size: var(--type-ui); }
+.card-bottom,
+.companion-links a { font-size: var(--type-caption); }
+.segmented button,
+.global-option { font-size: var(--type-caption); }
+.footer-links > div,
+.footer p { font-size: var(--type-ui); }
+.footer-bottom,
+.copyright,
+.license-note { font-size: var(--type-caption); }
+.stage-number,
+.lesson-index,
+.lesson-section-number,
+.docs-process li:before,
+.lesson-nav-link > span { font-variant-numeric: tabular-nums; }
+
+@media (max-width: 1023px) {
+  .hero-actions .button { font-size: var(--type-ui); }
+}
+@media (max-width: 767px) {
+  .navigation a,
+  .docs-mobile-nav summary,
+  .docs-mobile-nav nav a { font-size: var(--type-support); line-height: 1.5; }
+  .hero-actions .button,
+  .closing .button { font-size: var(--type-ui); }
+  .demo-caption,
+  .demo-caption a { font-size: var(--type-meta); }
+}

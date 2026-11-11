@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="386" viewBox="0 0 860 386" role="img" aria-labelledby="title desc">
+<title id="title">Factory Skills terminal example</title>
+<desc id="desc">Install implement-feature, ask Claude Code for fallback states, reuse existing components, and verify the change with a typecheck. This transcript is adapted from the repository demo.</desc>
+<defs><linearGradient id="surface" x2="0" y2="1"><stop stop-color="#fafafa"/><stop offset="1" stop-color="#f7f7f7"/></linearGradient></defs>
+<style>text{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:14px;font-weight:400;letter-spacing:0;white-space:pre}.command{fill:#262626}.output{fill:#555}.quiet{fill:#6b6b6b}.symbol{fill:#757575}.emphasis{fill:#3f3f3f}.prompt{fill:#757575}.success{fill:#3f3f3f}.small{font-size:11px}</style>
+<rect width="860" height="386" fill="url(#surface)"/>
+<text x="30" y="37" class="command"><tspan class="prompt">$ </tspan>npx skills add akdevsaha-dev/factory-skills --skill implement-feature</text>
+<text x="48" y="64" class="output"><tspan class="success">✓</tspan> Installed <tspan class="emphasis">implement-feature</tspan> <tspan class="quiet">→ Claude Code, Codex</tspan></text>
+<line x1="30" y1="87" x2="830" y2="87" stroke="#e3e3e3"/>
+<text x="30" y="118" class="command"><tspan class="prompt">$ </tspan>claude</text>
+<text x="30" y="145" class="command"><tspan class="emphasis">› </tspan>/implement-feature implement fallback for the fetching views</text>
+<text x="48" y="189" class="output"><tspan class="symbol">·  </tspan>Found 3 views that fetch data</text>
+<text x="48" y="215" class="output"><tspan class="symbol">·  </tspan>ProjectsView already handles <tspan class="quiet">loading · error · empty</tspan></text>
+<text x="48" y="241" class="output"><tspan class="symbol">·  </tspan>Reusing <tspan class="emphasis">&lt;Spinner /&gt;</tspan> and <tspan class="emphasis">&lt;ErrorState /&gt;</tspan></text>
+<text x="48" y="267" class="output"><tspan class="symbol">·  </tspan>Updated <tspan class="emphasis">InvoicesView.tsx</tspan>, <tspan class="emphasis">MembersView.tsx</tspan></text>
+<text x="48" y="293" class="output"><tspan class="symbol">·  </tspan>Read “fallback” as <tspan class="quiet">loading · error · empty</tspan>, like ProjectsView</text>
+<rect x="30" y="320" width="800" height="40" rx="6" fill="#ededed" stroke="#d5d5d5"/>
+<text x="46" y="345" class="success"><tspan>✓ </tspan>typecheck passed</text>
+<text x="814" y="345" text-anchor="end" class="quiet small">0 new files · 0 new dependencies</text>
+</svg>
