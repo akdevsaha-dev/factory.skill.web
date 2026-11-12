@@ -33,7 +33,7 @@ export function SkillVisual({ name }: { name: string }) {
     {name === 'hungry-jack' && <div className="visual-pipeline">
       <div className="visual-panel-label">From plan to proof</div>
       {['Understand the change', 'Build a focused slice', 'Verify the result'].map((label, i) => <div className="pipeline-step" key={label}><span className="pipeline-index">0{i + 1}</span><span>{label}</span><Check size={13}/></div>)}
-      <div className="pipeline-return">↳ Repeat for the next slice</div>
+      <div className="pipeline-return">Repeat for the next slice</div>
     </div>}
   </div>;
 }
