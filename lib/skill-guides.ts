@@ -94,6 +94,22 @@ export const skillGuides: SkillGuide[] = [
  watch:'Start balanced. Turn effort up because the change deserves deeper work, not because the longest process sounds safest. Reflect is optional and only runs when a demonstrated failure calls for it.',related:['plan-change','implement-feature','verify-work','simplify-code','review-changes','reflect']
  },
  {
+ name:'smart-push',category:'Ship',summary:'Turn local changes into a pull request a reviewer can follow.',
+ intro:'Finishing the code is only part of the job. Someone still has to split the work into sensible commits, keep secrets and scratch files out, push to the right place, and write a pull request that tells the truth about testing. Smart Push does that preparation, then stops and asks before anything leaves your machine.',
+ when:'Use it when the change is ready to share: a new branch and PR, more commits for an open PR, or a branch that was pushed but never got its PR. It only runs when you invoke it, so it never publishes code just because files changed.',
+ before:'Have git and the GitHub CLI installed, and run gh auth login. In a fork workflow, keep your fork and the original project as remotes. The names don’t matter, because the skill checks ownership rather than trusting origin and upstream. In Codex, invoke it as $smart-push.',
+ steps:['Inspects the working tree, branches, remotes, existing PRs, and the repository’s conventions.','Plans atomic commits and a branch, staging part of a file when a file holds two changes.','Runs the repository’s own relevant checks and scans for secrets, debug code, and stray files.','Shows the targets, commits, and check results, then pushes and opens or updates the PR after your approval.'],
+ examples:[
+ {title:'The everyday handoff',prompt:'/smart-push',note:'Commits locally, then asks before the first push and before the PR.'},
+ {title:'Preview the plan',prompt:'/smart-push --dry-run',note:'Shows the commits, targets, and checks without staging, committing, or pushing anything.'},
+ {title:'Share work in progress',prompt:'/smart-push --draft',note:'Opens the pull request as a draft. It also opens a draft on its own when important verification is still unresolved.'},
+ {title:'Skip the slow checks',prompt:'/smart-push --skip-checks',note:'Skips linting, type checking, and tests. The secret scan still runs, and the PR says plainly that checks were skipped.'},
+ {title:'Commit and push only',prompt:'/smart-push --no-pr',note:'Use --no-push to stop after the local commits instead.'},
+ {title:'Name the target',prompt:'/smart-push target the develop branch and leave the config changes out',note:'Plain-language instructions work alongside the flags.'}],
+ expect:'A short report with the branch, commit hashes and messages, push destination, PR link, base and head, check results, and warnings. Each remote step is confirmed against GitHub before it’s reported. Commits and PR descriptions carry no AI attribution.',
+ watch:'It never force-pushes, rewrites published history, merges, or pushes to a repository you don’t own unless you ask for that specific action. A rejected push or a conflict comes back to you as a decision. Skipped or failing checks are reported as they are, never as passing.',related:['verify-work','review-changes','catch-up']
+ },
+ {
  name:'plan-change',category:'Companion',summary:'Work out what a change touches before you commit to the design.',
  intro:'A useful plan makes the next edit easier. This skill finds the nearest existing pattern, maps the affected code and consumers, and turns the request into small slices with checks attached.',
  when:'Use it before a change that crosses modules, alters a contract, or needs an explicit risk assessment. Skip a separate planning session for an obvious, contained change.',

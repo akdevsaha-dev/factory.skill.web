@@ -1,4 +1,4 @@
-import { Check, Code, Database, Folder, GitBranch, ShieldCheck, Stack } from '@phosphor-icons/react';
+import { Check, Code, Database, Folder, GitBranch, GitPullRequest, ShieldCheck, Stack } from '@phosphor-icons/react';
 
 // Illustrative workflows, rather than screenshots of a running product.
 export function SkillVisual({ name }: { name: string }) {
@@ -34,6 +34,11 @@ export function SkillVisual({ name }: { name: string }) {
       <div className="visual-panel-label">From plan to proof</div>
       {['Understand the change', 'Build a focused slice', 'Verify the result'].map((label, i) => <div className="pipeline-step" key={label}><span className="pipeline-index">0{i + 1}</span><span>{label}</span><Check size={13}/></div>)}
       <div className="pipeline-return">Repeat for the next slice</div>
+    </div>}
+    {name === 'smart-push' && <div className="visual-pipeline">
+      <div className="visual-panel-label"><GitPullRequest size={14}/> me:feat/csv-export → acme:main</div>
+      {['feat(invoices): add CSV export', 'test(invoices): cover escaping', 'docs: document export'].map((label, i) => <div className="pipeline-step" key={label}><span className="pipeline-index">0{i + 1}</span><span>{label}</span><Check size={13}/></div>)}
+      <div className="pipeline-return">Pushed after your approval</div>
     </div>}
   </div>;
 }

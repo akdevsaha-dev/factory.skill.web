@@ -19,7 +19,7 @@ The site exports to `out/` and can be served by any static host. `npm run typech
 
 ## Content
 
-Skill descriptions and commands live in `lib/skills.ts`. The six primary workflows and five companion skills reflect the upstream README at implementation time. Recheck upstream when changing installation or contribution instructions.
+Skill descriptions and commands live in `lib/skills.ts`. The seven primary workflows and five companion skills reflect the upstream README at implementation time. Recheck upstream when changing installation or contribution instructions.
 
 `public/demo.svg` is the upstream repository’s animated demo; `public/demo-static.svg` provides a reduced-motion equivalent. Both are shown in grayscale to match the site. The original asset is MIT licensed; its license is preserved in `public/UPSTREAM-LICENSE`.
 
@@ -29,7 +29,7 @@ Geist and Geist Mono, neutral color tokens, restrained borders and shadows, 7px 
 
 ## Guides and lessons
 
-`lib/skill-guides.ts` contains the 11 skill guides and 56 example prompts. `lib/lessons.ts` contains the six ordered lessons. Both feed statically generated pages under `/skills/` and `/learn/`. Add a data entry to generate a new route and include it in navigation and the sitemap. Commands marked Terminal run in a shell; prompts marked Send to your agent are requests for the coding agent. Examples are illustrative, not execution records.
+`lib/skill-guides.ts` contains the 12 skill guides and 62 example prompts. `lib/lessons.ts` contains the six ordered lessons. Both feed statically generated pages under `/skills/` and `/learn/`. Add a data entry to generate a new route and include it in navigation and the sitemap. Commands marked Terminal run in a shell; prompts marked Send to your agent are requests for the coding agent. Examples are illustrative, not execution records.
 
 ## License
 
